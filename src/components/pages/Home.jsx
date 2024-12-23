@@ -57,8 +57,6 @@ function App() {
           <div className="explore-content">
           <p>Our commitment is to address a wide array of blockchain and crypto challenges comprehensively. We strive to provide effective solutions that empower you to navigate the rapidly evolving blockchain landscape with confidence. Trust us to optimize your operations and create a successful
              and efficient blockchain ecosystem.</p>
-          {/* <p>Discover the difference that Web 3 Resolver Panel can make in resolving a
-          diverse range of blockchain, cryptocurrency, and DeFi issues. Get started today!</p> */}
           <div className="details">
             <img alt="explore image" src={blockchain} />
           </div>
@@ -96,21 +94,16 @@ function App() {
         <section className='footer'>
           <div className='footer-row'>
             <div className='col'>
-              <div>
               <Link to="/">
                 <img src={logo} alt='footer-logo' />
               </Link>
-              </div>
-
             </div>
             <div className='col'>
-              <div>
                 <ul>
                   <li><a href='#hero'>Home </a></li>
                   <li><a href='#explore'>Get started </a></li>
                   <li><a href='#service'>Services </a></li>
                 </ul>
-              </div>
             </div>
           </div>
           <div className='attribution'>

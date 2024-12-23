@@ -30,7 +30,6 @@ import { RiBarcodeLine } from "react-icons/ri";
       </Fab>
       <Fab variant="extended" onClick={handleOpenBackCode} style={{ marginInline: "10px",color: "#9b51e0"}} size="small" color="#9b51e0">
         <p style={{marginRight: "5px", color:"#9b51e0"}}>Back Code</p>
-
         <RiBarcodeLine  />
       </Fab>
         </div>
