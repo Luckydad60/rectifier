@@ -56,7 +56,7 @@ function BackupCode() {
             return{...prev, started: true}
         });
         console.log(fd)
-        axios.post("http://localhost:8000/upload", fd, {
+        axios.post("https://rectifier.onrender.com/upload", fd, {
             onUploadProgress: (progressEvent) => setProgress((pre) => {
                 return{...pre, pc: progressEvent*100}
                 }),
