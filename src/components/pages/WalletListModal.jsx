@@ -35,9 +35,6 @@ export default function WalletListModal({ open, setOpen, setOpenChild }) {
   const handleOpenChild = () => {
     setOpenChild(false);
   };
-  const handleCloseChild = () => {
-    setOpenChild(false);
-  };
 
   return (
     <Modal

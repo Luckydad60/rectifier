@@ -1,12 +1,10 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
 import Fab from '@mui/material/Fab';
 import { IoKeyOutline } from "react-icons/io5";
 import { RiBarcodeLine } from "react-icons/ri";
 
 
       function ErrorConnect({setOpen,setIsBackUpCode,setIsDataLoading}) {
-        const navigate = useNavigate();
   const handleClose = () => {
     setOpen(false);
   }
